@@ -1,0 +1,66 @@
+<div th:fragment="sidebar">
+  <aside class="app-sidebar">
+    <div class="app-sidebar__user">
+      <img
+        class="app-sidebar__user-avatar"
+        src="/img/my.jpg"
+        width="50px"
+        alt="User Image"
+      />
+      <div>
+        <p class="app-sidebar__user-name">
+          <b
+            th:if="${session.containsKey('user')}"
+            th:text="${session.user}"
+          ></b>
+        </p>
+        <p class="app-sidebar__user-designation">Chào mừng bạn trở lại</p>
+      </div>
+    </div>
+    <hr />
+    <ul class="app-menu">
+      <li>
+        <a class="app-menu__item haha" th:href="@{/index.html}"
+          ><i class="app-menu__icon bx bx-cart-alt"></i>
+          <span class="app-menu__label">Trở về trang chủ</span></a
+        >
+      </li>
+      <li>
+        <a class="app-menu__item active" th:href="@{/posadmin}"
+          ><i class="app-menu__icon bx bx-tachometer"></i
+          ><span class="app-menu__label">Bảng điều khiển</span></a
+        >
+      </li>
+      <li>
+        <a class="app-menu__item" th:href="@{/table-data-customer}"
+          ><i class="app-menu__icon bx bx-user-voice"></i
+          ><span class="app-menu__label">Quản lý khách hàng</span></a
+        >
+      </li>
+      <li>
+        <a class="app-menu__item" th:href="@{/table-data-product}"
+          ><i class="app-menu__icon bx bx-purchase-tag-alt"></i
+          ><span class="app-menu__label">Quản lý sản phẩm</span></a
+        >
+      </li>
+      <li>
+        <a class="app-menu__item" th:href="@{/table-data-oder}"
+          ><i class="app-menu__icon bx bx-task"></i
+          ><span class="app-menu__label">Quản lý đơn hàng</span></a
+        >
+      </li>
+      <li>
+        <a class="app-menu__item" href="quan-ly-bao-cao.html"
+          ><i class="app-menu__icon bx bx-pie-chart-alt-2"></i
+          ><span class="app-menu__label">Báo cáo doanh thu</span></a
+        >
+      </li>
+      <li>
+        <a class="app-menu__item" href="#"
+          ><i class="app-menu__icon bx bx-cog"></i
+          ><span class="app-menu__label">Cài đặt hệ thống</span></a
+        >
+      </li>
+    </ul>
+  </aside>
+</div>

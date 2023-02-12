@@ -1,0 +1,98 @@
+<div th:fragment="price">
+  <h5 class="section-title position-relative text-uppercase mb-3">
+    <span class="bg-secondary pr-3">Filter by price</span>
+  </h5>
+  <div class="bg-light p-4 mb-30">
+    <form th:action="@{/searchbyprice}" method="get">
+      <!-- <div
+        class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3"
+      >
+        <input
+          type="checkbox"
+          class="custom-control-input"
+          checked
+          id="price-all"
+        />
+        <label class="custom-control-label" for="price-all">All Price</label>
+        <span class="badge border font-weight-normal">1000</span>
+      </div> -->
+      <div
+        class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3"
+      >
+        <input
+          type="checkbox"
+          class="custom-control-input"
+          name="searchprice"
+          value="5000"
+          id="price-1"
+        />
+        <label class="custom-control-label" for="price-1">$0 - $5000</label>
+        <span class="badge border font-weight-normal">150</span>
+      </div>
+      <div
+        class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3"
+      >
+        <input
+          type="checkbox"
+          class="custom-control-input"
+          name="searchprice"
+          value="10000"
+          id="price-2"
+        />
+        <label class="custom-control-label" for="price-2">$5000 - $10000</label>
+        <span class="badge border font-weight-normal">295</span>
+      </div>
+      <div
+        class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3"
+      >
+        <input
+          type="checkbox"
+          class="custom-control-input"
+          name="searchprice"
+          value="20000"
+          id="price-3"
+        />
+        <label class="custom-control-label" for="price-3"
+          >$10000 - $20000</label
+        >
+        <span class="badge border font-weight-normal">246</span>
+      </div>
+      <div
+        class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3"
+      >
+        <input
+          type="checkbox"
+          class="custom-control-input"
+          name="searchprice"
+          value="30000"
+          id="price-4"
+        />
+        <label class="custom-control-label" for="price-4"
+          >$20000 - $30000</label
+        >
+        <span class="badge border font-weight-normal">145</span>
+      </div>
+      <div
+        class="custom-control custom-checkbox d-flex align-items-center justify-content-between"
+      >
+        <input
+          type="checkbox"
+          class="custom-control-input"
+          name="searchprice"
+          value="60000"
+          id="price-5"
+        />
+        <label class="custom-control-label" for="price-5"
+          >$30000 - $50000</label
+        >
+        <span class="badge border font-weight-normal">168</span>
+      </div>
+      <button
+        type="submit"
+        class="btn btn-block btn-primary font-weight-bold my-3 py-3"
+      >
+        submit
+      </button>
+    </form>
+  </div>
+</div>
